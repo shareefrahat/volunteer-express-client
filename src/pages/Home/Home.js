@@ -11,9 +11,11 @@ const Home = () => {
         <h2 className="my-10">Home Page</h2>
       </section>
       <section>
-        {services.map((service) => (
-          <ServiceCard key={service._id} service={service}></ServiceCard>
-        ))}
+        <div className="grid grid-cols-4">
+          {services.map((service) => (
+            <ServiceCard key={service._id} service={service}></ServiceCard>
+          ))}
+        </div>
       </section>
     </>
   );
