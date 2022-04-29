@@ -2,7 +2,9 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Login from "./components/Login/Login";
+import Dashboard from "./pages/Dashboard/Dashboard";
 import Home from "./pages/Home/Home";
+import PrivateRoute from "./pages/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -11,6 +13,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Home> </Home>}></Route>
         <Route path="/home" element={<Home> </Home>}></Route>
+        <Route
+          path="/dashboard"
+          element={
+            <PrivateRoute>
+              <Dashboard></Dashboard>
+            </PrivateRoute>
+          }
+        ></Route>
         <Route path="/login" element={<Login></Login>}></Route>
       </Routes>
     </div>

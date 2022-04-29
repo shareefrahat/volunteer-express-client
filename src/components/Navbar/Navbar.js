@@ -28,7 +28,11 @@ const Navbar = () => {
       name: "BLOG",
     },
   ];
-
+  let displayBlock;
+  const adminMail = "imr4h47@gmail.com";
+  if (user?.email === adminMail) {
+    displayBlock = "block";
+  }
   const handleLogout = () => {
     signOut(auth);
   };
@@ -47,6 +51,14 @@ const Navbar = () => {
               </Link>
             ))}
           </nav>
+        </section>
+        <section className={`${displayBlock || "hidden"}`}>
+          <Link
+            to="/dashboard"
+            className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300  rounded text-xl dark:bg-green-600 dark:hover:bg-green-700 focus:outline-none dark:focus:ring-green-800 px-2.5 py-1 ml-10"
+          >
+            Dashboard
+          </Link>
         </section>
         <section>
           {user ? (
