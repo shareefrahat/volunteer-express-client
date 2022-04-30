@@ -5,6 +5,7 @@ import {
 } from "@heroicons/react/outline";
 import React from "react";
 import { Link } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import useServices from "../../hooks/useServices";
 
 const EventList = () => {
@@ -12,6 +13,7 @@ const EventList = () => {
   let count = 1;
   return (
     <>
+      <ToastContainer />
       <div className="flex flex-row">
         <section className="w-fit h-[1000px] px-10 py-10  border border-blue-700 shadow-md flex flex-col gap-10">
           <h2 className="text-2xl text-blue-700 font-bold">DASHBOARD</h2>
