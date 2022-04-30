@@ -34,8 +34,8 @@ const EventList = () => {
             </Link>
           </div>
         </section>
-        <section className="w-full px-20 py-10">
-          <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <section className="w-full px-20 py-10 ">
+          <div className="relative overflow-x-auto shadow-md sm:rounded-lg border border-blue-700">
             <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
               <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
