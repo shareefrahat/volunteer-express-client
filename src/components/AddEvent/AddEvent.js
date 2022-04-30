@@ -12,7 +12,7 @@ const AddEvent = () => {
     const event = { name, img, description };
     const confirm = window.confirm("Are you sure to add new event?");
     if (confirm) {
-      fetch("http://localhost:5000/services", {
+      fetch("https://volunteer-express.herokuapp.com/services", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
